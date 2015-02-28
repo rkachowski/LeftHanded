@@ -9,6 +9,7 @@
 #import "Levels.h"
 #import "GridCharacter.h"
 #import "GridCell.h"
+#import "Touchable.h"
 
 #define SWIPE_DISTANCE 150
 
@@ -115,14 +116,6 @@
     return testPosition;
 }
 
-- (CGPoint)getFrontPoint:(GridCharacter *)character
-{
-    CGPoint charPosition = character.position;
-    CGPoint behindChar = ccpMult(ccpFromSize(character.contentSize), 0.5);
-
-    CGPoint testPosition = ccpAdd(charPosition, behindChar);
-    return testPosition;
-}
 
 - (void)update:(CCTime)delta
 {
@@ -147,9 +140,22 @@
     {
         //you die
     }
-    else if ([cell.type isEqualToString:@"T"])
+//    else if ([cell.type isEqualToString:@"T"])
+//    {
+//        //you teleport
+//    }
+
+    for(id child in _objects.children)
     {
-        //you teleport
+        if([child isKindOfClass:[Touchable class]])
+        {
+            Touchable *touchable = (Touchable *)child;
+
+            if(CGRectIntersectsRect(_guy.boundingBox, touchable.boundingBox))
+            {
+                [touchable onTouch];
+            }
+        }
     }
 
 }
