@@ -18,6 +18,18 @@ static const int SPACING = 20;
 
 @synthesize cellSize;
 
+- (id)initWithTexture:(CCTexture *)texture rect:(CGRect)rect rotated:(BOOL)rotated
+{
+    self = [super initWithTexture:texture rect:rect rotated:rotated];
+    if (self)
+    {
+        self.userInteractionEnabled = YES;
+    }
+
+    return self;
+}
+
+
 - (void)onEnterTransitionDidFinish
 {
     [super onEnterTransitionDidFinish];
@@ -74,6 +86,8 @@ static const int SPACING = 20;
             cell.position = position;
 
             cell.anchorPoint = CGPointZero;
+            cell.gridPosition = ccp(x,y);
+
             _cells[x][y] = cell;
             [self addChild:cell];
         }
@@ -90,5 +104,18 @@ static const int SPACING = 20;
     _cellSize = CGSizeMake(cellDimension, cellDimension);
 
 }
+
+- (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+{
+    NSLog(@"yeah");
+}
+
+
+- (void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+{
+    [super touchEnded:touch withEvent:event];
+    NSLog(@"yey");
+}
+
 
 @end

@@ -11,4 +11,16 @@
 {
 
 }
+
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+        self.userInteractionEnabled = TRUE;
+    }
+
+    return self;
+}
+
 @end

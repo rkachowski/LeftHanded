@@ -9,4 +9,6 @@
 @interface GridCell : CCNodeColor
 
 @property (nonatomic) BOOL isSolid;
+
+@property (nonatomic) CGPoint gridPosition;
 @end

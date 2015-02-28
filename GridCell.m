@@ -15,12 +15,27 @@
     self = [super initWithColor:color width:w height:h];
     if (self)
     {
-        self.opacity =0.4;
         self.isSolid = NO;
+
     }
 
     return self;
 }
+
+- (void)onEnterTransitionDidFinish
+{
+    [super onEnterTransitionDidFinish];
+
+    if(_isSolid)
+    {
+        self.opacity = 0.4;
+    }
+    else
+    {
+        self.opacity = 0;
+    }
+}
+
 
 
 @end
