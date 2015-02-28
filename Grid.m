@@ -24,23 +24,37 @@ static const int SPACING = 20;
     [self calculateGridSize];
     [self createCells];
 
-//    [self drawDebugGrid];
+    [self drawDebugGrid];
 }
 
 - (void)drawDebugGrid
 {
+    GridCell *firstCell = _cells[0][0];
+
     for (int x = -1; x <= GRID_SIZE.width; x++)
     {
-        for (int y = -1; y <= GRID_SIZE.height; y++)
-        {
-            CCNodeColor *line = [[CCNodeColor alloc] initWithColor:[CCColor blackColor]
-                                                             width:1 height:GRID_SIZE.height * _cellSize.height];
-            line.opacity = 0.8;
-            CGPoint position = ccp(x * _cellSize.width + SPACING, y * _cellSize.height + SPACING);
-            line.position = position;
+        CCNodeColor *line = [[CCNodeColor alloc] initWithColor:[CCColor blackColor]
+                                                         width:1 height:GRID_SIZE.height * _cellSize.height];
+        line.opacity = 0.2;
 
-            [self addChild:line];
-        }
+
+        CGPoint position = ccp(x * (_cellSize.width) + SPACING, firstCell.position.y);
+        line.position = position;
+
+        [self addChild:line];
+    }
+
+    for (int y = -1; y <= GRID_SIZE.height; y++)
+    {
+        CCNodeColor *line = [[CCNodeColor alloc] initWithColor:[CCColor blackColor]
+                                                         width:GRID_SIZE.width * _cellSize.width height:1];
+        line.opacity = 0.8;
+
+
+        CGPoint position = ccp(firstCell.position.x, y * (_cellSize.height) + SPACING);
+        line.position = position;
+
+        [self addChild:line];
     }
 }
 

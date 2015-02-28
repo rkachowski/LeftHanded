@@ -15,7 +15,8 @@
     self = [super initWithColor:color width:w height:h];
     if (self)
     {
-        self.opacity =(CGFloat)(0.4 + 0.6 * drand48());
+        self.opacity =0.4;
+        self.isSolid = NO;
     }
 
     return self;

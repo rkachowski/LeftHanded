@@ -8,5 +8,5 @@
 
 @interface GridCell : CCNodeColor
 
-
+@property (nonatomic) BOOL isSolid;
 @end
