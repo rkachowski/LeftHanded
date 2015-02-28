@@ -6,6 +6,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 
+@class GridCell;
+
 
 @interface Grid : CCSprite
 {
@@ -18,7 +20,11 @@
 @property(nonatomic) BOOL drawing;
 @property(nonatomic, strong) NSMutableSet *drawnSet;
 
-+ (Grid *)fromCells:(NSArray *)gridData;
-
 - (void)setCellsFromArray:(NSArray *)array;
+
+- (GridCell *)cellAtPoint:(CGPoint)point;
+
+- (void)printGrid;
+
+- (void)setCell:(GridCell *)cell toType:(NSString *)type;
 @end

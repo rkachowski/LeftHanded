@@ -70,11 +70,11 @@
 		98C3961568462337AF9461D8 /* Levels.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39EE8C2412C32B3C8EDE8 /* Levels.m */; };
 		98C3980CBDF2D57E6B23BF70 /* GridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C398623C171747A7A94EA9 /* GridCell.m */; };
 		98C39BC55C65ADE70E473E77 /* GridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C398623C171747A7A94EA9 /* GridCell.m */; };
-		98C39C586D698C57CD306B35 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C399B6601CD701FD6B0A00 /* GameScene.m */; };
-		98C39CF9FC1E57AB35CB6362 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C399B6601CD701FD6B0A00 /* GameScene.m */; };
+		98C39C586D698C57CD306B35 /* EditorScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C399B6601CD701FD6B0A00 /* EditorScene.m */; };
+		98C39CF9FC1E57AB35CB6362 /* EditorScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C399B6601CD701FD6B0A00 /* EditorScene.m */; };
 		98C39DC853FAEB25317731A8 /* Levels.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39EE8C2412C32B3C8EDE8 /* Levels.m */; };
 		98C39F208679EFD26A1B4095 /* Levels.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39EE8C2412C32B3C8EDE8 /* Levels.m */; };
-		98C39F5C006B166C681A2794 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C399B6601CD701FD6B0A00 /* GameScene.m */; };
+		98C39F5C006B166C681A2794 /* EditorScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C399B6601CD701FD6B0A00 /* EditorScene.m */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
 		B71F5913188484E7003F4D28 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
@@ -183,9 +183,9 @@
 		98C3960131501E96989963CD /* Levels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Levels.h; sourceTree = "<group>"; };
 		98C3966A6F8F4DF2085B96CC /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
 		98C398623C171747A7A94EA9 /* GridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridCell.m; sourceTree = "<group>"; };
-		98C399B6601CD701FD6B0A00 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		98C399B6601CD701FD6B0A00 /* EditorScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorScene.m; sourceTree = "<group>"; };
 		98C39AB4D79CAF1EA760E62F /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
-		98C39ED95F38BE9F35FCF7C3 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		98C39ED95F38BE9F35FCF7C3 /* EditorScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorScene.h; sourceTree = "<group>"; };
 		98C39EE8C2412C32B3C8EDE8 /* Levels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Levels.m; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -449,8 +449,8 @@
 		98C391C1B2FBB0D63A176665 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				98C399B6601CD701FD6B0A00 /* GameScene.m */,
-				98C39ED95F38BE9F35FCF7C3 /* GameScene.h */,
+				98C399B6601CD701FD6B0A00 /* EditorScene.m */,
+				98C39ED95F38BE9F35FCF7C3 /* EditorScene.h */,
 				98C397EEA7F4ED58197C03CD /* Grid */,
 			);
 			name = Game;
@@ -830,7 +830,7 @@
 				7A4036E819DE3F33007B6E8F /* MainScene.m in Sources */,
 				7A40360419DDEE84007B6E8F /* main.m in Sources */,
 				7A59498E19E3941300F65F90 /* AppDelegate.m in Sources */,
-				98C39CF9FC1E57AB35CB6362 /* GameScene.m in Sources */,
+				98C39CF9FC1E57AB35CB6362 /* EditorScene.m in Sources */,
 				98C393A408CEF3046030441B /* Grid.m in Sources */,
 				98C39BC55C65ADE70E473E77 /* GridCell.m in Sources */,
 				98C3961568462337AF9461D8 /* Levels.m in Sources */,
@@ -843,7 +843,7 @@
 			files = (
 				927F619E196C771E000F43EF /* MainScene.m in Sources */,
 				5B121030197484FA004C1E1D /* LeftHandedActivity.m in Sources */,
-				98C39C586D698C57CD306B35 /* GameScene.m in Sources */,
+				98C39C586D698C57CD306B35 /* EditorScene.m in Sources */,
 				98C392AD9D18DD866F91D6C6 /* Grid.m in Sources */,
 				98C394B296185E845B25F40D /* GridCell.m in Sources */,
 				98C39DC853FAEB25317731A8 /* Levels.m in Sources */,
@@ -857,7 +857,7 @@
 				B73789871807631A0076A88C /* main.m in Sources */,
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
-				98C39F5C006B166C681A2794 /* GameScene.m in Sources */,
+				98C39F5C006B166C681A2794 /* EditorScene.m in Sources */,
 				98C395BC305A22C559624161 /* Grid.m in Sources */,
 				98C3980CBDF2D57E6B23BF70 /* GridCell.m in Sources */,
 				98C39F208679EFD26A1B4095 /* Levels.m in Sources */,

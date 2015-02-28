@@ -8,8 +8,13 @@
 @class Grid;
 
 
-@interface GameScene : CCScene
+@interface EditorScene : CCScene
 
 @property (nonatomic) CCSprite *background;
 @property (nonatomic) Grid *grid;
+
+@property (nonatomic) CCButton *type;
+@property(nonatomic, strong) NSArray *types;
+@property(nonatomic, strong) NSMutableSet *drawnSet;
+@property(nonatomic, strong) NSDictionary *typeToChar;
 @end

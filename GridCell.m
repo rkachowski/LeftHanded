@@ -9,6 +9,7 @@
 @implementation GridCell
 {
 
+    NSString *_type;
 }
 - (id)initWithColor:(CCColor *)color width:(GLfloat)w height:(GLfloat)h
 {
@@ -37,4 +38,27 @@
 }
 
 
+- (void)setCellType:(NSString *)aChar
+{
+    if([aChar isEqualToString:@"S"])
+    {
+        self.color = [CCColor redColor];
+        self.isSolid = !self.isSolid;
+    }
+    else if ([aChar isEqualToString:@"P"])
+    {
+        self.isSolid = NO;
+        self.color = [CCColor blueColor];
+        self.opacity = 0.4;
+    }
+    else if ([aChar isEqualToString:@"W"])
+    {
+        self.isSolid = NO;
+        self.color = [CCColor greenColor];
+        self.opacity = 0.4;
+    }
+
+    _type = aChar;
+
+}
 @end

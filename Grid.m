@@ -12,22 +12,10 @@ static const int SPACING = 20;
 @implementation Grid
 {
     NSMutableArray *_cells;
-    BOOL _drawing;
     NSMutableSet *_drawnSet;
 }
 
-
 @synthesize cellSize;
-
-+ (Grid*)fromCells:(NSArray*)gridData
-{
-    Grid *grid = [[Grid alloc] init];
-
-
-    [grid setCellsFromArray:gridData];
-
-    return grid;
-}
 
 - (void)setCellsFromArray:(NSArray *)array
 {
@@ -40,10 +28,7 @@ static const int SPACING = 20;
             NSString *gridChar = column[y];
             GridCell *currentCell = _cells[x][y];
 
-            if([gridChar isEqualToString:@"S"])
-            {
-                currentCell.isSolid = YES;
-            }
+            [currentCell setCellType:gridChar];
         }
     }
 }
@@ -136,39 +121,6 @@ static const int SPACING = 20;
 }
 
 
-- (void)toggleCell:(GridCell *)cell
-{
-    if(_drawnSet && cell && ![_drawnSet containsObject:cell])
-    {
-        [_drawnSet addObject:cell];
-
-        cell.isSolid = !cell.isSolid;
-    }
-}
-
-- (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
-{
-    _drawnSet = [NSMutableSet set];
-    
-    GridCell *cell = [self cellAtPoint:[touch locationInNode:self]];
-
-    [self toggleCell:cell];
-}
-
-
-- (void)touchMoved:(CCTouch *)touch withEvent:(CCTouchEvent *)event
-{
-    GridCell *cell = [self cellAtPoint:[touch locationInNode:self]];
-    
-    [self toggleCell:cell];
-}
-
-- (void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
-{
-    [super touchEnded:touch withEvent:event];
-    _drawnSet = nil;
-}
-
 - (GridCell*)cellAtPoint:(CGPoint)point
 {
     CGPoint gridCoords = [self pointToGridCoords:point];
@@ -194,7 +146,40 @@ static const int SPACING = 20;
     return ccp(column,row);
 }
 
+-(void)printGrid
+{
+    NSArray *cells = _cells;
+    NSMutableArray *output = [NSMutableArray array];
+
+    for(int x = 0; x < cells.count; x++)
+    {
+        output[x] = [NSMutableArray array];
+        for(int y = 0; y < [cells[0] count]; y++)
+        {
+            GridCell *currentCell = cells[x][y];
+            NSString*blockType = @"#";
+
+            if(currentCell.isSolid)
+            {
+                blockType = @"S";
+            }
 
 
+            output[x][y] = blockType;
+        }
+    }
+    for(int i = 0; i < output.count; i++)
+    {
+        output[i] = [output[i] componentsJoinedByString:@","];
+    }
+
+    NSLog(@"%@", output);
+}
+
+
+- (void)setCell:(GridCell *)cell toType:(NSString *)type
+{
+    [cell setCellType:type];
+}
 
 @end

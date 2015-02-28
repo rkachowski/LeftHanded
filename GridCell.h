@@ -11,4 +11,8 @@
 @property (nonatomic) BOOL isSolid;
 
 @property (nonatomic) CGPoint gridPosition;
+
+@property(nonatomic, copy) NSString *type;
+
+- (void)setCellType:(NSString *)aChar;
 @end
