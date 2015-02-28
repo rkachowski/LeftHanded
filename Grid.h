@@ -4,9 +4,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 
 @interface Grid : CCSprite
+{
+    CGSize _cellSize;
+}
 
 
+@property(nonatomic) CGSize cellSize;
+@property(nonatomic, strong) NSMutableArray *cells;
 @end
