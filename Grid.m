@@ -3,7 +3,6 @@
 // Copyright (c) 2015 Apportable. All rights reserved.
 //
 
-#import <CoreGraphics/CoreGraphics.h>
 #import "Grid.h"
 #import "GridCell.h"
 
@@ -107,14 +106,45 @@ static const int SPACING = 20;
 
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
-    NSLog(@"yeah");
+
 }
 
+- (void)touchMoved:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+{
+    NSLog(@"yeah! %@", [self cellAtPoint:[touch locationInNode:self]]);
+}
+
+- (GridCell*)cellAtPoint:(CGPoint)point
+{
+    CGPoint gridCoords = [self pointToGridCoords:point];
+    GridCell *result = nil;
+
+    @try
+    {
+        result = _cells[(NSUInteger) gridCoords.x][(NSUInteger)gridCoords.y];
+    }
+    @catch (NSException *ex)
+    {
+        //OOB
+    }
+
+    return result;
+}
+
+- (CGPoint)pointToGridCoords:(CGPoint)point
+{
+    float column = floor((point.x - SPACING) / _cellSize.width);
+    float row = floor((point.y - SPACING) / _cellSize.height);
+
+    return ccp(column,row);
+}
 
 - (void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
     [super touchEnded:touch withEvent:event];
-    NSLog(@"yey");
+//    CGPoint cellCoords = [self pointToGridCoords:[touch locationInNode:self]];
+//
+//    NSLog(@"x = %f, y = %f", cellCoords.x, cellCoords.y);
 }
 
 
