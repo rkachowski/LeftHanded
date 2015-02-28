@@ -38,6 +38,28 @@ static const int SPACING = 20;
     }
 }
 
+- (GridCell *)spawn
+{
+    if(!_spawn)
+    {
+        for (int x = 0; x < GRID_SIZE.width; x++)
+        {
+            for (int y = 0; y < GRID_SIZE.height; y++)
+            {
+                GridCell *currentCell = _cells[x][y];
+                if([currentCell.type isEqualToString:@"P"])
+                {
+                    _spawn = currentCell;
+                    break;
+                }
+            }
+        }
+    }
+
+    return _spawn;
+}
+
+
 - (id)initWithTexture:(CCTexture *)texture rect:(CGRect)rect rotated:(BOOL)rotated
 {
     self = [super initWithTexture:texture rect:rect rotated:rotated];

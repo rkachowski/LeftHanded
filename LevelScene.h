@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 
 @class Grid;
+@class GridCharacter;
 
 
 @interface LevelScene : CCScene
@@ -17,4 +18,6 @@
 @property (nonatomic) CCSprite *gridImage;
 @property (nonatomic) CCSprite *objects;
 
+@property(nonatomic) CGPoint startLocation;
+@property(nonatomic, strong) GridCharacter *guy;
 @end
