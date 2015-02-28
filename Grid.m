@@ -19,6 +19,35 @@ static const int SPACING = 20;
 
 @synthesize cellSize;
 
++ (Grid*)fromCells:(NSArray*)gridData
+{
+    Grid *grid = [[Grid alloc] init];
+
+
+    [grid setCellsFromArray:gridData];
+
+    return grid;
+}
+
+- (void)setCellsFromArray:(NSArray *)array
+{
+    for(int x = 0; x < array.count; x++)
+    {
+        NSString *columnData = array[x];
+        NSArray *column = [columnData componentsSeparatedByString:@","];
+        for (int y = 0; y < [column count]; y++)
+        {
+            NSString *gridChar = column[y];
+            GridCell *currentCell = _cells[x][y];
+
+            if([gridChar isEqualToString:@"S"])
+            {
+                currentCell.isSolid = YES;
+            }
+        }
+    }
+}
+
 - (id)initWithTexture:(CCTexture *)texture rect:(CGRect)rect rotated:(BOOL)rotated
 {
     self = [super initWithTexture:texture rect:rect rotated:rotated];
@@ -109,7 +138,7 @@ static const int SPACING = 20;
 
 - (void)toggleCell:(GridCell *)cell
 {
-    if(_drawnSet && ![_drawnSet containsObject:cell])
+    if(_drawnSet && cell && ![_drawnSet containsObject:cell])
     {
         [_drawnSet addObject:cell];
 
