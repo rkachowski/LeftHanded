@@ -10,6 +10,16 @@
 {
 
 }
+- (id)initWithColor:(CCColor *)color width:(GLfloat)w height:(GLfloat)h
+{
+    self = [super initWithColor:color width:w height:h];
+    if (self)
+    {
+        self.opacity =(CGFloat)(0.4 + 0.6 * drand48());
+    }
+
+    return self;
+}
 
 
 @end

@@ -7,4 +7,6 @@
 
 
 @interface GridCell : CCNodeColor
+
+
 @end
