@@ -66,9 +66,12 @@
 		98C392AD9D18DD866F91D6C6 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C3966A6F8F4DF2085B96CC /* Grid.m */; };
 		98C393A408CEF3046030441B /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C3966A6F8F4DF2085B96CC /* Grid.m */; };
 		98C394B296185E845B25F40D /* GridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C398623C171747A7A94EA9 /* GridCell.m */; };
+		98C394B970B7A9F03CD4FAD4 /* LevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39622E269066B32862593 /* LevelScene.m */; };
 		98C395BC305A22C559624161 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C3966A6F8F4DF2085B96CC /* Grid.m */; };
 		98C3961568462337AF9461D8 /* Levels.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39EE8C2412C32B3C8EDE8 /* Levels.m */; };
 		98C3980CBDF2D57E6B23BF70 /* GridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C398623C171747A7A94EA9 /* GridCell.m */; };
+		98C39876727E09D94F5E3105 /* LevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39622E269066B32862593 /* LevelScene.m */; };
+		98C39B1B91D6ACEA1EBC6AA4 /* LevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39622E269066B32862593 /* LevelScene.m */; };
 		98C39BC55C65ADE70E473E77 /* GridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C398623C171747A7A94EA9 /* GridCell.m */; };
 		98C39C586D698C57CD306B35 /* EditorScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C399B6601CD701FD6B0A00 /* EditorScene.m */; };
 		98C39CF9FC1E57AB35CB6362 /* EditorScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C399B6601CD701FD6B0A00 /* EditorScene.m */; };
@@ -181,10 +184,12 @@
 		927F61BF196C771E000F43EF /* LeftHanded Android.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LeftHanded Android.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C39515A30D558358949196 /* GridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridCell.h; sourceTree = "<group>"; };
 		98C3960131501E96989963CD /* Levels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Levels.h; sourceTree = "<group>"; };
+		98C39622E269066B32862593 /* LevelScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelScene.m; sourceTree = "<group>"; };
 		98C3966A6F8F4DF2085B96CC /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
 		98C398623C171747A7A94EA9 /* GridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridCell.m; sourceTree = "<group>"; };
 		98C399B6601CD701FD6B0A00 /* EditorScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorScene.m; sourceTree = "<group>"; };
 		98C39AB4D79CAF1EA760E62F /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		98C39D51151441522C8EC2A4 /* LevelScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelScene.h; sourceTree = "<group>"; };
 		98C39ED95F38BE9F35FCF7C3 /* EditorScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorScene.h; sourceTree = "<group>"; };
 		98C39EE8C2412C32B3C8EDE8 /* Levels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Levels.m; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
@@ -463,6 +468,8 @@
 				98C39AB4D79CAF1EA760E62F /* Grid.h */,
 				98C39EE8C2412C32B3C8EDE8 /* Levels.m */,
 				98C3960131501E96989963CD /* Levels.h */,
+				98C39622E269066B32862593 /* LevelScene.m */,
+				98C39D51151441522C8EC2A4 /* LevelScene.h */,
 			);
 			name = Grid;
 			sourceTree = "<group>";
@@ -834,6 +841,7 @@
 				98C393A408CEF3046030441B /* Grid.m in Sources */,
 				98C39BC55C65ADE70E473E77 /* GridCell.m in Sources */,
 				98C3961568462337AF9461D8 /* Levels.m in Sources */,
+				98C39876727E09D94F5E3105 /* LevelScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -847,6 +855,7 @@
 				98C392AD9D18DD866F91D6C6 /* Grid.m in Sources */,
 				98C394B296185E845B25F40D /* GridCell.m in Sources */,
 				98C39DC853FAEB25317731A8 /* Levels.m in Sources */,
+				98C39B1B91D6ACEA1EBC6AA4 /* LevelScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,6 +870,7 @@
 				98C395BC305A22C559624161 /* Grid.m in Sources */,
 				98C3980CBDF2D57E6B23BF70 /* GridCell.m in Sources */,
 				98C39F208679EFD26A1B4095 /* Levels.m in Sources */,
+				98C394B970B7A9F03CD4FAD4 /* LevelScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
