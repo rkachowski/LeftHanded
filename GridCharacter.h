@@ -11,7 +11,6 @@
 @property (nonatomic) CGPoint direction;
 @property (nonatomic) float speed;
 
-+ (void)setup;
 
-- (void)nextDirection;
+- (CGPoint)nextDirection;
 @end

@@ -25,6 +25,8 @@
 
 - (GridCell *)cellAtPoint:(CGPoint)point;
 
+- (GridCell *)getCell:(CGPoint )gridCoords;
+
 - (void)printGrid;
 
 - (void)setCell:(GridCell *)cell toType:(NSString *)type;

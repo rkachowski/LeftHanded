@@ -3,8 +3,10 @@
 // Copyright (c) 2015 Apportable. All rights reserved.
 //
 
+#import <CoreGraphics/CoreGraphics.h>
 #import "Grid.h"
 #import "GridCell.h"
+#import "CCEffect_Private.h"
 
 static const CGSize GRID_SIZE = {.height = 12, .width = 24};
 static const int SPACING = 20;
@@ -151,11 +153,17 @@ static const int SPACING = 20;
 - (GridCell*)cellAtPoint:(CGPoint)point
 {
     CGPoint gridCoords = [self pointToGridCoords:point];
+    return [self getCell:gridCoords];
+
+}
+
+- (GridCell *)getCell:(CGPoint )gridCoords
+{
     GridCell *result = nil;
 
     @try
     {
-        result = _cells[(NSUInteger) gridCoords.x][(NSUInteger)gridCoords.y];
+        result = _cells[(NSUInteger) (gridCoords).x][(NSUInteger) (gridCoords).y];
     }
     @catch (NSException *ex)
     {

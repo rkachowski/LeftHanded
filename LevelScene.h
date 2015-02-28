@@ -20,4 +20,6 @@
 
 @property(nonatomic) CGPoint startLocation;
 @property(nonatomic, strong) GridCharacter *guy;
+@property(nonatomic) CGPoint bufferedDir;
+@property(nonatomic) BOOL buffer;
 @end

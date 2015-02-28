@@ -10,12 +10,15 @@
 #import "GridCharacter.h"
 #import "GridCell.h"
 
+#define SWIPE_DISTANCE 150
 
 @implementation LevelScene
 {
 
     CGPoint _startLocation;
     GridCharacter *_guy;
+    CGPoint _bufferedDir;
+    BOOL _buffer;
 }
 
 - (id)init
@@ -39,14 +42,12 @@
 
 - (void)setup
 {
-    //get spawn
     GridCell *spawn = _grid.spawn;
 
     _guy = [[GridCharacter alloc] initWithImageNamed:@"guy 1.png"];
-    _guy.position = spawn.position;
+    _guy.position = ccpAdd(spawn.position,ccp(0, 10));
+
     [_objects addChild:_guy];
-    //add a character there
-    //find direction for character to go
 }
 
 - (void)loadLevel
@@ -69,13 +70,93 @@
 {
     CGPoint endLocation = [touch locationInNode:self];
 
-    if (endLocation.x < _startLocation.x && ccpDistance(_startLocation, endLocation) > 60)
+    if (endLocation.x < _startLocation.x && ccpDistance(_startLocation, endLocation) > SWIPE_DISTANCE)
     {
-        NSLog(@"Swipe!");
-        [_guy nextDirection];
+        if([self canMove:_guy])
+        {
+            _guy.direction = [_guy nextDirection];
+        }
+        else
+        {
+            [self bufferDirection:[_guy nextDirection]];
+        }
     }
     
     [super touchEnded:touch withEvent:event];
+}
+
+- (void)bufferDirection:(CGPoint)point
+{
+    NSLog(@"buffer!");
+    _bufferedDir = point;
+    _buffer = YES;
+}
+
+- (BOOL)canMove:(GridCharacter *)character
+{
+    CGPoint charPosition = character.position;
+    CGPoint behindChar = ccpMult(ccpFromSize(character.contentSize), -0.5);
+
+    CGPoint testPosition = ccpAdd(charPosition, behindChar);
+    GridCell *cell = [_grid cellAtPoint:testPosition];
+    if (!cell) return NO;
+
+    CGPoint desiredDirection = [character nextDirection];
+
+    CGPoint desiredCellLocation = ccpAdd(desiredDirection, cell.gridPosition);
+    GridCell *desiredCell = _grid.cells[(NSUInteger)desiredCellLocation.x ] [(NSUInteger)desiredCellLocation.y];
+    if (!desiredCell) return NO;;
+
+    return !desiredCell.isSolid;
+}
+
+- (void)update:(CCTime)delta
+{
+    if(_buffer)
+    {
+        if ([self canMove:_guy])
+        {
+            _guy.direction = _bufferedDir;
+            _buffer = NO;
+        }
+    }
+
+    [self checkInFront];
+
+    GridCell *cell = [_grid cellAtPoint:_guy.position];
+
+    if ([cell.type isEqualToString:@"E"])
+    {
+        //you exit
+    }
+    else if ([cell.type isEqualToString:@"W"])
+    {
+        //you die
+    }
+    else if ([cell.type isEqualToString:@"T"])
+    {
+        //you teleport
+    }
+
+}
+
+- (void)checkInFront
+{
+    GridCell *cell = [_grid cellAtPoint:_guy.position];
+    CGPoint nextCellLocation = ccpAdd(cell.gridPosition, _guy.direction);
+    GridCell *nextCell = [_grid getCell:nextCellLocation];
+
+    if(!nextCell || nextCell.isSolid)
+    {
+        if([self canMove:_guy])
+        {
+            _guy.direction = [_guy nextDirection];
+        }
+        else
+        {
+            //die! i would rather die than turn right!
+        }
+    }
 }
 
 
