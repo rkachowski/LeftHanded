@@ -3,12 +3,10 @@
 // Copyright (c) 2015 Apportable. All rights reserved.
 //
 
-#import "GameScene.h"
-#import "Grid.h"
+#import <Foundation/Foundation.h>
 
 
-@implementation GameScene
-{
+@interface Grid : CCSprite
 
-}
+
 @end

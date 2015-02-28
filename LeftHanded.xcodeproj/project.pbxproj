@@ -63,6 +63,9 @@
 		927F61B9196C771E000F43EF /* iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590E188484E7003F4D28 /* iPhone@2x.png */; };
 		927F61BA196C771E000F43EF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B737896D180762440076A88C /* Default.png */; };
 		927F61BB196C771E000F43EF /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
+		98C392AD9D18DD866F91D6C6 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C3966A6F8F4DF2085B96CC /* Grid.m */; };
+		98C393A408CEF3046030441B /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C3966A6F8F4DF2085B96CC /* Grid.m */; };
+		98C395BC305A22C559624161 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C3966A6F8F4DF2085B96CC /* Grid.m */; };
 		98C39C586D698C57CD306B35 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C399B6601CD701FD6B0A00 /* GameScene.m */; };
 		98C39CF9FC1E57AB35CB6362 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C399B6601CD701FD6B0A00 /* GameScene.m */; };
 		98C39F5C006B166C681A2794 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C399B6601CD701FD6B0A00 /* GameScene.m */; };
@@ -170,7 +173,9 @@
 		7BF6AF9F1A425F9800FFF9BA /* JavaFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaFoundation.framework; path = "../../../../../../../Library/SBAndroid/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaFoundation.framework"; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		927F61BF196C771E000F43EF /* LeftHanded Android.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LeftHanded Android.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98C3966A6F8F4DF2085B96CC /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
 		98C399B6601CD701FD6B0A00 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		98C39AB4D79CAF1EA760E62F /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
 		98C39ED95F38BE9F35FCF7C3 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -436,8 +441,18 @@
 			children = (
 				98C399B6601CD701FD6B0A00 /* GameScene.m */,
 				98C39ED95F38BE9F35FCF7C3 /* GameScene.h */,
+				98C397EEA7F4ED58197C03CD /* Grid */,
 			);
 			name = Game;
+			sourceTree = "<group>";
+		};
+		98C397EEA7F4ED58197C03CD /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				98C3966A6F8F4DF2085B96CC /* Grid.m */,
+				98C39AB4D79CAF1EA760E62F /* Grid.h */,
+			);
+			name = Grid;
 			sourceTree = "<group>";
 		};
 		B737893C1807616C0076A88C /* Source */ = {
@@ -802,6 +817,7 @@
 				7A40360419DDEE84007B6E8F /* main.m in Sources */,
 				7A59498E19E3941300F65F90 /* AppDelegate.m in Sources */,
 				98C39CF9FC1E57AB35CB6362 /* GameScene.m in Sources */,
+				98C393A408CEF3046030441B /* Grid.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,6 +828,7 @@
 				927F619E196C771E000F43EF /* MainScene.m in Sources */,
 				5B121030197484FA004C1E1D /* LeftHandedActivity.m in Sources */,
 				98C39C586D698C57CD306B35 /* GameScene.m in Sources */,
+				98C392AD9D18DD866F91D6C6 /* Grid.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -823,6 +840,7 @@
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 				98C39F5C006B166C681A2794 /* GameScene.m in Sources */,
+				98C395BC305A22C559624161 /* Grid.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

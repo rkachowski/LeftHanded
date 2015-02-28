@@ -5,6 +5,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class Grid;
 
-@interface GameScene : NSObject
+
+@interface GameScene : CCScene
+
+@property (nonatomic) CCSprite *background;
+@property (nonatomic) Grid *grid;
 @end
