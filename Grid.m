@@ -12,6 +12,8 @@ static const int SPACING = 20;
 @implementation Grid
 {
     NSMutableArray *_cells;
+    BOOL _drawing;
+    NSMutableSet *_drawnSet;
 }
 
 
@@ -104,14 +106,38 @@ static const int SPACING = 20;
 
 }
 
+
+- (void)toggleCell:(GridCell *)cell
+{
+    if(_drawnSet && ![_drawnSet containsObject:cell])
+    {
+        [_drawnSet addObject:cell];
+
+        cell.isSolid = !cell.isSolid;
+    }
+}
+
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
+    _drawnSet = [NSMutableSet set];
+    
+    GridCell *cell = [self cellAtPoint:[touch locationInNode:self]];
 
+    [self toggleCell:cell];
 }
+
 
 - (void)touchMoved:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
-    NSLog(@"yeah! %@", [self cellAtPoint:[touch locationInNode:self]]);
+    GridCell *cell = [self cellAtPoint:[touch locationInNode:self]];
+    
+    [self toggleCell:cell];
+}
+
+- (void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+{
+    [super touchEnded:touch withEvent:event];
+    _drawnSet = nil;
 }
 
 - (GridCell*)cellAtPoint:(CGPoint)point
@@ -139,13 +165,7 @@ static const int SPACING = 20;
     return ccp(column,row);
 }
 
-- (void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
-{
-    [super touchEnded:touch withEvent:event];
-//    CGPoint cellCoords = [self pointToGridCoords:[touch locationInNode:self]];
-//
-//    NSLog(@"x = %f, y = %f", cellCoords.x, cellCoords.y);
-}
+
 
 
 @end

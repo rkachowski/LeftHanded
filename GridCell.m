@@ -22,9 +22,9 @@
     return self;
 }
 
-- (void)onEnterTransitionDidFinish
+- (void)setIsSolid:(BOOL)isSolid
 {
-    [super onEnterTransitionDidFinish];
+    _isSolid = isSolid;
 
     if(_isSolid)
     {
@@ -35,7 +35,6 @@
         self.opacity = 0;
     }
 }
-
 
 
 @end

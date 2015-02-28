@@ -15,4 +15,6 @@
 
 @property(nonatomic) CGSize cellSize;
 @property(nonatomic, strong) NSMutableArray *cells;
+@property(nonatomic) BOOL drawing;
+@property(nonatomic, strong) NSMutableSet *drawnSet;
 @end
