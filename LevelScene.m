@@ -45,7 +45,7 @@
     GridCell *spawn = _grid.spawn;
 
     _guy = [[GridCharacter alloc] initWithImageNamed:@"guy 1.png"];
-    _guy.position = ccpAdd(spawn.position,ccp(0, 10));
+    _guy.position = ccpAdd(spawn.position,ccp(20, 20));
 
     [_objects addChild:_guy];
 }
@@ -94,20 +94,34 @@
 
 - (BOOL)canMove:(GridCharacter *)character
 {
-    CGPoint charPosition = character.position;
-    CGPoint behindChar = ccpMult(ccpFromSize(character.contentSize), -0.5);
-
-    CGPoint testPosition = ccpAdd(charPosition, behindChar);
-    GridCell *cell = [_grid cellAtPoint:testPosition];
+    GridCell *cell = [_grid cellAtPoint:[self getBehindPoint:character]];
     if (!cell) return NO;
 
     CGPoint desiredDirection = [character nextDirection];
 
     CGPoint desiredCellLocation = ccpAdd(desiredDirection, cell.gridPosition);
-    GridCell *desiredCell = _grid.cells[(NSUInteger)desiredCellLocation.x ] [(NSUInteger)desiredCellLocation.y];
+    GridCell *desiredCell = [_grid getCell:desiredCellLocation];
     if (!desiredCell) return NO;;
 
     return !desiredCell.isSolid;
+}
+
+- (CGPoint)getBehindPoint:(GridCharacter *)character
+{
+    CGPoint charPosition = character.position;
+    CGPoint behindChar = ccpMult(ccpFromSize(character.contentSize), -0.5);
+
+    CGPoint testPosition = ccpAdd(charPosition, behindChar);
+    return testPosition;
+}
+
+- (CGPoint)getFrontPoint:(GridCharacter *)character
+{
+    CGPoint charPosition = character.position;
+    CGPoint behindChar = ccpMult(ccpFromSize(character.contentSize), 0.5);
+
+    CGPoint testPosition = ccpAdd(charPosition, behindChar);
+    return testPosition;
 }
 
 - (void)update:(CCTime)delta
@@ -142,7 +156,7 @@
 
 - (void)checkInFront
 {
-    GridCell *cell = [_grid cellAtPoint:_guy.position];
+    GridCell *cell = [_grid cellAtPoint:[self getBehindPoint:_guy]];
     CGPoint nextCellLocation = ccpAdd(cell.gridPosition, _guy.direction);
     GridCell *nextCell = [_grid getCell:nextCellLocation];
 
@@ -150,6 +164,7 @@
     {
         if([self canMove:_guy])
         {
+            NSLog(@"auto change!");
             _guy.direction = [_guy nextDirection];
         }
         else
