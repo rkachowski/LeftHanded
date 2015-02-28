@@ -65,6 +65,12 @@
         self.color = [CCColor whiteColor];
         self.opacity = 0.4;
     }
+    else if ([aChar isEqualToString:@"T"])
+    {
+        self.isSolid = NO;
+        self.color = [CCColor purpleColor];
+        self.opacity = 0.4;
+    }
     else
     {
         self.type = @"#";

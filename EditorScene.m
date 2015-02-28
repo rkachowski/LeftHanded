@@ -29,7 +29,8 @@
                 @"block",
                 @"spawn",
                 @"window",
-                @"exit"
+                @"exit",
+                @"tele"
         ];
         
 
@@ -37,7 +38,9 @@
                 @"block":@"S",
                 @"spawn":@"P",
                 @"window":@"W",
-                @"exit":@"E"
+                @"exit":@"E",
+                @"tele":@"T"
+
         };
 
     }
