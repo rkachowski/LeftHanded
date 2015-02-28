@@ -28,14 +28,16 @@
         _types = @[
                 @"block",
                 @"spawn",
-                @"window"
+                @"window",
+                @"exit"
         ];
         
 
         _typeToChar = @{
                 @"block":@"S",
                 @"spawn":@"P",
-                @"window":@"W"
+                @"window":@"W",
+                @"exit":@"E"
         };
 
     }
@@ -62,6 +64,7 @@
 {
     if(_drawnSet && cell && ![_drawnSet containsObject:cell])
     {
+        [_drawnSet addObject:cell];
         [_grid setCell:cell toType:_typeToChar[_type.label.string]];
     }
 }
@@ -104,5 +107,9 @@
 
 }
 
+- (void)outputGrid
+{
+    [_grid printGrid];
+}
 
 @end

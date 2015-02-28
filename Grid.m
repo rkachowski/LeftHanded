@@ -29,6 +29,11 @@ static const int SPACING = 20;
             GridCell *currentCell = _cells[x][y];
 
             [currentCell setCellType:gridChar];
+
+            if([gridChar isEqualToString:@"P"])
+            {
+                _spawn = currentCell;
+            }
         }
     }
 }
@@ -157,15 +162,8 @@ static const int SPACING = 20;
         for(int y = 0; y < [cells[0] count]; y++)
         {
             GridCell *currentCell = cells[x][y];
-            NSString*blockType = @"#";
 
-            if(currentCell.isSolid)
-            {
-                blockType = @"S";
-            }
-
-
-            output[x][y] = blockType;
+            output[x][y] = currentCell.type;
         }
     }
     for(int i = 0; i < output.count; i++)

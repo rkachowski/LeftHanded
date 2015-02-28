@@ -19,6 +19,7 @@
 @property(nonatomic, strong) NSMutableArray *cells;
 @property(nonatomic) BOOL drawing;
 @property(nonatomic, strong) NSMutableSet *drawnSet;
+@property(nonatomic) GridCell *spawn;
 
 - (void)setCellsFromArray:(NSArray *)array;
 

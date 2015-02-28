@@ -30,10 +30,12 @@
     if(_isSolid)
     {
         self.opacity = 0.4;
+        self.type = @"S";
     }
     else
     {
         self.opacity = 0;
+        self.type = @"#";
     }
 }
 
@@ -56,6 +58,16 @@
         self.isSolid = NO;
         self.color = [CCColor greenColor];
         self.opacity = 0.4;
+    }
+    else if ([aChar isEqualToString:@"E"])
+    {
+        self.isSolid = NO;
+        self.color = [CCColor whiteColor];
+        self.opacity = 0.4;
+    }
+    else
+    {
+        self.type = @"#";
     }
 
     _type = aChar;
