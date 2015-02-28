@@ -10,6 +10,7 @@
 {
 
     NSString *_type;
+    BOOL _debug;
 }
 - (id)initWithColor:(CCColor *)color width:(GLfloat)w height:(GLfloat)h
 {
@@ -17,7 +18,8 @@
     if (self)
     {
         self.isSolid = NO;
-
+        _debug = NO;
+        self.opacity = 0;
     }
 
     return self;
@@ -29,12 +31,12 @@
 
     if(_isSolid)
     {
-        self.opacity = 0.4;
+       if(_debug)  self.opacity = 0.4;
         self.type = @"S";
     }
     else
     {
-        self.opacity = 0;
+       if(_debug)  self.opacity = 0;
         self.type = @"#";
     }
 }
@@ -51,25 +53,25 @@
     {
         self.isSolid = NO;
         self.color = [CCColor blueColor];
-        self.opacity = 0.4;
+       if(_debug)  self.opacity = 0.4;
     }
     else if ([aChar isEqualToString:@"W"])
     {
         self.isSolid = NO;
         self.color = [CCColor greenColor];
-        self.opacity = 0.4;
+       if(_debug)  self.opacity = 0.4;
     }
     else if ([aChar isEqualToString:@"E"])
     {
         self.isSolid = NO;
         self.color = [CCColor whiteColor];
-        self.opacity = 0.4;
+       if(_debug)  self.opacity = 0.4;
     }
     else if ([aChar isEqualToString:@"T"])
     {
         self.isSolid = NO;
         self.color = [CCColor purpleColor];
-        self.opacity = 0.4;
+       if(_debug)  self.opacity = 0.4;
     }
     else
     {

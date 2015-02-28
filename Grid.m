@@ -80,7 +80,7 @@ static const int SPACING = 20;
     [self calculateGridSize];
     [self createCells];
 
-    [self drawDebugGrid];
+//    [self drawDebugGrid];
 }
 
 - (void)drawDebugGrid

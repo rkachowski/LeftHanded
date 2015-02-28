@@ -14,5 +14,7 @@
 
 @property(nonatomic, copy) NSString *type;
 
+@property(nonatomic) BOOL debug;
+
 - (void)setCellType:(NSString *)aChar;
 @end

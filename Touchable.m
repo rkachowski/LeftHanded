@@ -40,10 +40,9 @@
 {
     CCAction *scaleUp = [CCActionScaleBy actionWithDuration:0.5 scale:2];
     CCAction *flip = [CCActionScaleTo actionWithDuration:0.5 scaleX:-2 scaleY:2];
-    CCAction *scaleDown = [CCActionScaleBy actionWithDuration:0.5 scale:0.0.8];
+    CCAction *scaleDown = [CCActionScaleBy actionWithDuration:0.5 scale:0.08];
 
     CCActionSequence *seq = [CCActionSequence actionWithArray:@[scaleUp, flip,scaleDown]];
-
     [self runAction:seq];
 }
 
