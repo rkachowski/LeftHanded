@@ -9,6 +9,8 @@ But the resistance fights back...
 
 You play as future David Bowie, famous future left handed musician and left handed rights (lefts) activist. 
 
+![](https://raw.githubusercontent.com/rkachowski/LeftHanded/master/startscreen.gif)
+
 #The Game
 
 You have broken into the museum of the bourgeoisie right handed scum. 
