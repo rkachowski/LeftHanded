@@ -138,7 +138,10 @@
     }
     else if ([cell.type isEqualToString:@"W"])
     {
-        //you die
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"ui"
+                                                            object:nil
+                                                          userInfo:@{@"message":@"die",
+                                                                  @"sender": NSStringFromClass([self class])}];
     }
 //    else if ([cell.type isEqualToString:@"T"])
 //    {
@@ -160,6 +163,13 @@
 
 }
 
+- (void)win
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ui"
+                                                        object:nil
+                                                      userInfo:@{@"message":@"win",
+                                                              @"sender": NSStringFromClass([self class])}];
+}
 - (void)checkInFront
 {
     GridCell *cell = [_grid cellAtPoint:[self getBehindPoint:_guy]];

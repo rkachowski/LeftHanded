@@ -27,6 +27,7 @@
 
 #import "AppDelegate.h"
 #import "CCBuilderReader.h"
+#import "UIFlowManager.h"
 
 @implementation AppController
 
@@ -51,7 +52,8 @@
     
     // Do any extra configuration of Cocos2d here (the example line changes the pixel format for faster rendering, but with less colors)
     //[cocos2dSetup setObject:kEAGLColorFormatRGB565 forKey:CCConfigPixelFormat];
-    
+
+    [UIFlowManager sharedManager];
     [self setupCocos2dWithOptions:cocos2dSetup];
     
     return YES;
@@ -59,7 +61,7 @@
 
 - (CCScene*) startScene
 {
-    return [CCBReader loadAsScene:@"LevelScene"];
+    return [CCBReader loadAsScene:@"TitleScene"];
 }
 
 @end

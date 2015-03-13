@@ -63,30 +63,42 @@
 		927F61B9196C771E000F43EF /* iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590E188484E7003F4D28 /* iPhone@2x.png */; };
 		927F61BA196C771E000F43EF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B737896D180762440076A88C /* Default.png */; };
 		927F61BB196C771E000F43EF /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
+		98C392825CCA21BE1591720F /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39125F210A3F7526DDF36 /* GameOverScene.m */; };
 		98C392AD9D18DD866F91D6C6 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C3966A6F8F4DF2085B96CC /* Grid.m */; };
+		98C39319DE5F7B320BEB773A /* WinScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C390C031906F94A474C762 /* WinScene.m */; };
 		98C3933C1E391964A0FFAA6E /* Directions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C395EB8E801D605EEF60E1 /* Directions.m */; };
+		98C39362E81CCAA5E9974D49 /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39D73C60F530D0DD55D76 /* TitleScene.m */; };
 		98C3936CE555D9BA5C5D63DC /* Touchable.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39BAF9F98DD29389F22C0 /* Touchable.m */; };
 		98C393A408CEF3046030441B /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C3966A6F8F4DF2085B96CC /* Grid.m */; };
+		98C3943DE5547AC575551495 /* UIFlowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C3997BEA53519F908825AE /* UIFlowManager.m */; };
+		98C39441CC3F6285DBFCACB8 /* WinScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C390C031906F94A474C762 /* WinScene.m */; };
 		98C394B296185E845B25F40D /* GridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C398623C171747A7A94EA9 /* GridCell.m */; };
 		98C394B970B7A9F03CD4FAD4 /* LevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39622E269066B32862593 /* LevelScene.m */; };
 		98C395BC305A22C559624161 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C3966A6F8F4DF2085B96CC /* Grid.m */; };
+		98C395CF99B95A35FC3AD3AF /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39125F210A3F7526DDF36 /* GameOverScene.m */; };
 		98C395DB7DC6250F3BFF1441 /* Directions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C395EB8E801D605EEF60E1 /* Directions.m */; };
 		98C3961568462337AF9461D8 /* Levels.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39EE8C2412C32B3C8EDE8 /* Levels.m */; };
 		98C3980CBDF2D57E6B23BF70 /* GridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C398623C171747A7A94EA9 /* GridCell.m */; };
 		98C39876727E09D94F5E3105 /* LevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39622E269066B32862593 /* LevelScene.m */; };
+		98C39ADB6201627BF3C65A67 /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39125F210A3F7526DDF36 /* GameOverScene.m */; };
 		98C39B1B91D6ACEA1EBC6AA4 /* LevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39622E269066B32862593 /* LevelScene.m */; };
+		98C39B2D463C8CE49A01DD36 /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39D73C60F530D0DD55D76 /* TitleScene.m */; };
 		98C39BC55C65ADE70E473E77 /* GridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C398623C171747A7A94EA9 /* GridCell.m */; };
 		98C39BDCBA9FEF5856C6F18F /* GridCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39B9A6C4524A6BFEC655A /* GridCharacter.m */; };
 		98C39BFA3F79285F058E31EC /* Directions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C395EB8E801D605EEF60E1 /* Directions.m */; };
+		98C39C368AD82E7123A2AB7B /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39D73C60F530D0DD55D76 /* TitleScene.m */; };
 		98C39C586D698C57CD306B35 /* EditorScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C399B6601CD701FD6B0A00 /* EditorScene.m */; };
 		98C39CBD3A7511DEB6C17B3E /* Touchable.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39BAF9F98DD29389F22C0 /* Touchable.m */; };
 		98C39CF9FC1E57AB35CB6362 /* EditorScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C399B6601CD701FD6B0A00 /* EditorScene.m */; };
+		98C39D1E58598351C86B4C83 /* WinScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C390C031906F94A474C762 /* WinScene.m */; };
 		98C39D8E1B24702CAD3895C5 /* GridCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39B9A6C4524A6BFEC655A /* GridCharacter.m */; };
 		98C39DC853FAEB25317731A8 /* Levels.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39EE8C2412C32B3C8EDE8 /* Levels.m */; };
 		98C39ED2EE5A0D4DB3F05156 /* Touchable.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39BAF9F98DD29389F22C0 /* Touchable.m */; };
 		98C39ED335288C73A51EF166 /* GridCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39B9A6C4524A6BFEC655A /* GridCharacter.m */; };
+		98C39EFD3F2A8B7406D9573D /* UIFlowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C3997BEA53519F908825AE /* UIFlowManager.m */; };
 		98C39F208679EFD26A1B4095 /* Levels.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C39EE8C2412C32B3C8EDE8 /* Levels.m */; };
 		98C39F5C006B166C681A2794 /* EditorScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C399B6601CD701FD6B0A00 /* EditorScene.m */; };
+		98C39F6CC861A515413F9C80 /* UIFlowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C3997BEA53519F908825AE /* UIFlowManager.m */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
 		B71F5913188484E7003F4D28 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
@@ -191,22 +203,30 @@
 		7BF6AF9F1A425F9800FFF9BA /* JavaFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaFoundation.framework; path = "../../../../../../../Library/SBAndroid/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaFoundation.framework"; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		927F61BF196C771E000F43EF /* LeftHanded Android.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LeftHanded Android.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98C390C031906F94A474C762 /* WinScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinScene.m; sourceTree = "<group>"; };
+		98C3910893238D9C87B324E3 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
+		98C39125F210A3F7526DDF36 /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
 		98C39515A30D558358949196 /* GridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridCell.h; sourceTree = "<group>"; };
+		98C395BF1070C3F7F563CFA2 /* UIFlowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFlowManager.h; sourceTree = "<group>"; };
 		98C395EB8E801D605EEF60E1 /* Directions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Directions.m; sourceTree = "<group>"; };
 		98C3960131501E96989963CD /* Levels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Levels.h; sourceTree = "<group>"; };
 		98C39622E269066B32862593 /* LevelScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelScene.m; sourceTree = "<group>"; };
 		98C39625F01FEEDC0DE081B1 /* Touchable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Touchable.h; sourceTree = "<group>"; };
 		98C3966A6F8F4DF2085B96CC /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
 		98C396B45FBF4B70D57C0253 /* GridCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridCharacter.h; sourceTree = "<group>"; };
+		98C3975F9F400C2BFE92DE92 /* TitleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleScene.h; sourceTree = "<group>"; };
 		98C398623C171747A7A94EA9 /* GridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridCell.m; sourceTree = "<group>"; };
+		98C3997BEA53519F908825AE /* UIFlowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFlowManager.m; sourceTree = "<group>"; };
 		98C399B6601CD701FD6B0A00 /* EditorScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorScene.m; sourceTree = "<group>"; };
 		98C39AB4D79CAF1EA760E62F /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
 		98C39B7B6F64FDBE2CC711A6 /* Directions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Directions.h; sourceTree = "<group>"; };
 		98C39B9A6C4524A6BFEC655A /* GridCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridCharacter.m; sourceTree = "<group>"; };
 		98C39BAF9F98DD29389F22C0 /* Touchable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Touchable.m; sourceTree = "<group>"; };
 		98C39D51151441522C8EC2A4 /* LevelScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelScene.h; sourceTree = "<group>"; };
+		98C39D73C60F530D0DD55D76 /* TitleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleScene.m; sourceTree = "<group>"; };
 		98C39ED95F38BE9F35FCF7C3 /* EditorScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorScene.h; sourceTree = "<group>"; };
 		98C39EE8C2412C32B3C8EDE8 /* Levels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Levels.m; sourceTree = "<group>"; };
+		98C39F14D4A3EC7365523BAE /* WinScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinScene.h; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
 		B71F5909188484E7003F4D28 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = Icons/iPad.png; sourceTree = "<group>"; };
@@ -511,6 +531,14 @@
 				B7378993180767190076A88C /* MainScene.m */,
 				D352B48019EC608A00829775 /* MetalShaders */,
 				98C391C1B2FBB0D63A176665 /* Game */,
+				98C3997BEA53519F908825AE /* UIFlowManager.m */,
+				98C395BF1070C3F7F563CFA2 /* UIFlowManager.h */,
+				98C39125F210A3F7526DDF36 /* GameOverScene.m */,
+				98C3910893238D9C87B324E3 /* GameOverScene.h */,
+				98C390C031906F94A474C762 /* WinScene.m */,
+				98C39F14D4A3EC7365523BAE /* WinScene.h */,
+				98C39D73C60F530D0DD55D76 /* TitleScene.m */,
+				98C3975F9F400C2BFE92DE92 /* TitleScene.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -874,6 +902,10 @@
 				98C39D8E1B24702CAD3895C5 /* GridCharacter.m in Sources */,
 				98C39BFA3F79285F058E31EC /* Directions.m in Sources */,
 				98C39CBD3A7511DEB6C17B3E /* Touchable.m in Sources */,
+				98C3943DE5547AC575551495 /* UIFlowManager.m in Sources */,
+				98C395CF99B95A35FC3AD3AF /* GameOverScene.m in Sources */,
+				98C39441CC3F6285DBFCACB8 /* WinScene.m in Sources */,
+				98C39362E81CCAA5E9974D49 /* TitleScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -891,6 +923,10 @@
 				98C39BDCBA9FEF5856C6F18F /* GridCharacter.m in Sources */,
 				98C3933C1E391964A0FFAA6E /* Directions.m in Sources */,
 				98C3936CE555D9BA5C5D63DC /* Touchable.m in Sources */,
+				98C39F6CC861A515413F9C80 /* UIFlowManager.m in Sources */,
+				98C392825CCA21BE1591720F /* GameOverScene.m in Sources */,
+				98C39D1E58598351C86B4C83 /* WinScene.m in Sources */,
+				98C39C368AD82E7123A2AB7B /* TitleScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -909,6 +945,10 @@
 				98C39ED335288C73A51EF166 /* GridCharacter.m in Sources */,
 				98C395DB7DC6250F3BFF1441 /* Directions.m in Sources */,
 				98C39ED2EE5A0D4DB3F05156 /* Touchable.m in Sources */,
+				98C39EFD3F2A8B7406D9573D /* UIFlowManager.m in Sources */,
+				98C39ADB6201627BF3C65A67 /* GameOverScene.m in Sources */,
+				98C39319DE5F7B320BEB773A /* WinScene.m in Sources */,
+				98C39B2D463C8CE49A01DD36 /* TitleScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
